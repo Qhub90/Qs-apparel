@@ -7,7 +7,6 @@ import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sign-in.styles.scss';
 
-
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
@@ -24,11 +23,10 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
 
     try {
-       await auth.signInWithEmailAndPassword(email, password);
-       this.setState({ email: '', password: '' });
-
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: '', password: '' });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -62,8 +60,10 @@ class SignIn extends React.Component {
             required
           />
           <div className='buttons'>
-            <CustomButton type='submit'>SIGN IN</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google </CustomButton>
+            <CustomButton type='submit'> Sign in </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
           </div>
         </form>
       </div>
