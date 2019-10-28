@@ -8,33 +8,11 @@ import store from './redux/store';
 import './index.css';
 import App from './App';
 
-
 ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-          <App />
-      </BrowserRouter>
-    </Provider>,
-     document.getElementById('root')
-     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //  Redux starts here with the <Provider>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);
